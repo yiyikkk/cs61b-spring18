@@ -86,6 +86,9 @@ public class IntList {
 //            return A;
 //            //这个方法不行，因为只改变了fun-A指向的地址，main-A永远为空
 //        }
+        if(A==null){
+            return B;
+        }
         IntList p = A;
         while (p.rest != null) {
             p = p.rest;
