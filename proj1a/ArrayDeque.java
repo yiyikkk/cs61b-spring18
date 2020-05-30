@@ -41,7 +41,7 @@ public class ArrayDeque<T> {
     private void resize(int length) {
         T[] newitems = (T[]) new Object[length];
         int oldindex = addOne(nextfirst);
-        for (int i = 0; i < items.length; i++) {
+        for (int i = 0; i < size; i++) {
             newitems[i] = items[oldindex];
             oldindex = addOne(oldindex);
         }
@@ -85,23 +85,29 @@ public class ArrayDeque<T> {
     }
 
     public T removeFirst() {
+        if(size == 0){
+            return null;
+        }
         T a = items[addOne(nextfirst)];
         items[addOne(nextfirst)] = null;
         nextfirst = addOne(nextfirst);
         size -= 1;
-        if (items.length >= 16 && size < (items.length / 4)){
-            resize(items.length/2);
+        if (items.length >= 16 && size < (items.length / 4)) {
+            resize(items.length / 2);
         }
         return a;
     }
 
     public T removeLast() {
+        if(size == 0){
+            return null;
+        }
         T a = items[subOne(nextlast)];
         items[subOne(nextlast)] = null;
         nextlast = subOne(nextlast);
         size -= 1;
-        if (items.length >= 16 && size < (items.length / 4)){
-            resize(items.length/2);
+        if (items.length >= 16 && size < (items.length / 4)) {
+            resize(items.length / 2);
         }
         return a;
     }
@@ -113,9 +119,10 @@ public class ArrayDeque<T> {
      * @return
      */
     public T get(int index) {
-        if (index >= size) return null;
+        if (index >= size) {
+            return null;
+        }
         int start = addOne(nextfirst);
         return items[(start + index) % items.length];
     }
-
 }

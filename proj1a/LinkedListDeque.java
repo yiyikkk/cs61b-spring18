@@ -1,8 +1,8 @@
 public class LinkedListDeque<T> {
-    public class ItemNode {
-        public T item;
-        public ItemNode pre;
-        public ItemNode next;
+    private class ItemNode {
+        private T item;
+        private ItemNode pre;
+        private ItemNode next;
 
         public ItemNode(T item, ItemNode pre, ItemNode next) {
             this.item = item;
@@ -20,13 +20,6 @@ public class LinkedListDeque<T> {
         sentinel.next = sentinel;
         sentinel.pre = sentinel;
         size = 0;
-    }
-
-    public LinkedListDeque(T item) {
-        sentinel = new ItemNode(null, null, null);
-        sentinel.next = new ItemNode(item, sentinel, null);
-        sentinel.pre = sentinel.next;
-        size = 1;
     }
 
     public void addFirst(T item) {
@@ -60,24 +53,32 @@ public class LinkedListDeque<T> {
     }
 
     public T removeFirst() {
-        if (sentinel.next == sentinel) return null;
+        if (sentinel.next == sentinel) {
+            return null;
+        }
         T a = sentinel.next.item;
         sentinel.next.next.pre = sentinel;
         sentinel.next = sentinel.next.next;
+        size -= 1;
         return a;
     }
 
     public T removeLast() {
-        if (sentinel.next == sentinel) return null;
+        if (sentinel.next == sentinel) {
+            return null;
+        }
         T a = sentinel.pre.item;
         sentinel.pre.pre.next = sentinel;
         sentinel.pre = sentinel.pre.pre;
+        size -= 1;
         return a;
     }
 
     public T get(int index) {
         ItemNode p = sentinel.next;
-        if (index > size - 1) return null;
+        if (index > size - 1) {
+            return null;
+        }
         for (int i = 0; i < size; i++, p = p.next) {
             if (i == index) {
                 return p.item;
@@ -87,7 +88,9 @@ public class LinkedListDeque<T> {
     }
 
     public T getRecursive(int index) {
-        if (index > size - 1) return null;
+        if (index > size - 1) {
+            return null;
+        }
         return getR(sentinel.next, index);
     }
 

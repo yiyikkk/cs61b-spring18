@@ -2,11 +2,11 @@ import org.junit.Test;
 
 public class ArrayDequeTest {
     @Test
-    public void test(){
+    public void test() {
         ArrayDeque<String> a = new ArrayDeque<>();
 
         boolean isNull = a.isEmpty();
-        System.out.println("create, and the deque is null, "+isNull);
+        System.out.println("create, and the deque is null, " + isNull);
 
         a.addFirst("love");
         a.addLast("zeze");
@@ -21,14 +21,28 @@ public class ArrayDequeTest {
         a.addFirst("a");
 
         boolean isNull2 = a.isEmpty();
-        System.out.println("add, and the deque is null, "+isNull2);
+        System.out.println("add, and the deque is null, " + isNull2);
 
         a.printDeque();
-        System.out.println("size is "+a.size());
-        System.out.println("love is "+a.get(1));
+        System.out.println("size is " + a.size());
+        System.out.println("love is " + a.get(1));
 
         a.removeFirst();
-        a.removeLast();
+        a.removeFirst();
+        a.removeFirst();
+        a.removeFirst();
+        a.removeFirst();
+        a.removeFirst();
+        a.removeFirst();
+        a.removeFirst();
+        a.removeFirst();
+        a.removeFirst();
+        a.removeFirst();
+
+        a.addFirst("zeze");
+        a.addFirst("love");
+        a.addFirst("I");
+
         a.printDeque();
 
     }
