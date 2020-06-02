@@ -37,35 +37,18 @@ public class TestArrayDequeGold {
                 correct.addFirst(i);
                 action.addLast("addFirst(" + i + ")");
             } else if (numberBetweenZeroAndOne >= 0.5 && numberBetweenZeroAndOne < 0.75) {
-                assertEquals(message(), correct.size(), student.size());
+                assertEquals(message() + "size()", correct.size(), student.size());
                 if (correct.size() != 0) {
                     action.addLast("removeFirst()");
                     assertEquals(message(), correct.removeFirst(), student.removeFirst());
                 }
             } else {
-                assertEquals(message(), correct.size(), student.size());
+                assertEquals(message() + "size()", correct.size(), student.size());
                 if (correct.size() != 0) {
                     action.addLast("removeLast()");
                     assertEquals(message(), correct.removeLast(), student.removeLast());
                 }
             }
-        }
-    }
-
-    @Test
-    public void test2() {
-        ArrayDequeSolution<Integer> correct = new ArrayDequeSolution<>();
-        StudentArrayDeque<Integer> student = new StudentArrayDeque<>();
-        action = new ArrayDequeSolution<>();
-
-        student.addFirst(1);
-        correct.addFirst(2);
-        action.addFirst("addFirst(" + 2 + ")");
-
-        assertEquals(message(), correct.size(), student.size());
-        if (correct.size() != 0) {
-            action.addLast("removeLast()");
-            assertEquals(message(), correct.removeLast(), student.removeLast());
         }
     }
 }
