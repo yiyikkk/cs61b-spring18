@@ -10,7 +10,7 @@ public class Palindrome {
         return result;
     }
 
-    public boolean isPalindrome1(String word) {
+    private boolean isPalindrome1(String word) {
         if (word.length() == 0 || word.length() == 1) {
             return true;
         }
