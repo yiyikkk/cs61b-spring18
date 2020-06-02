@@ -27,40 +27,30 @@ public class Palindrome {
     }
 
     public boolean isPalindrome(String word) {
-        if (word.length() <= 1) {
-            return true;
-        }
-        Deque<Character> a = wordToDeque(word);
-        return helper(a);
+        return helper(wordToDeque(word));
     }
 
     private boolean helper(Deque<Character> rest) {
         if (rest.size() <= 1) {
             return true;
         }
-        char a = rest.removeFirst();
-        char b = rest.removeLast();
-        if (a != b) {
+        if (rest.removeFirst() != rest.removeLast()) {
             return false;
         }
         return helper(rest);
     }
 
     public boolean isPalindrome(String word, CharacterComparator cc) {
-        if (word.length() <= 1) {
-            return true;
-        }
-        Deque<Character> a = wordToDeque(word);
-        return helper(a, cc);
+        return helper(wordToDeque(word), cc);
     }
 
     private boolean helper(Deque<Character> rest, CharacterComparator cc) {
         if (rest.size() <= 1) {
             return true;
         }
-        char a = rest.removeFirst();
-        char b = rest.removeLast();
-        if (!cc.equalChars(a, b)) return false;
+        if (!cc.equalChars(rest.removeFirst(), rest.removeLast())) {
+            return false;
+        }
         return helper(rest, cc);
     }
 }

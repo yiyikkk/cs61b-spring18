@@ -62,7 +62,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
-  <component name="RunManager" selected="JUnit.TestOffByN.testEqualChars">
+  <component name="RunManager" selected="JUnit.TestPalindrome.testIsPalindrome">
     <configuration name="TestOffByN.testEqualChars" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="proj1b" />
       <option name="PACKAGE_NAME" value="" />
@@ -105,8 +105,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestOffByN.testEqualChars" />
         <item itemvalue="JUnit.TestPalindrome.testIsPalindrome" />
+        <item itemvalue="JUnit.TestOffByN.testEqualChars" />
         <item itemvalue="JUnit.TestOffByOne.testEqualChars" />
         <item itemvalue="JUnit.TestPalindrome.testWordToDeque" />
       </list>
@@ -122,7 +122,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1591078307547</updated>
-      <workItem from="1591078310217" duration="6321000" />
+      <workItem from="1591078310217" duration="8747000" />
     </task>
     <servers />
   </component>
@@ -142,22 +142,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="99" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1591081160433" />
-    <state width="1237" height="131" key="GridCell.Tab.0.bottom" timestamp="1591085088922">
+    <state width="1237" height="131" key="GridCell.Tab.0.bottom" timestamp="1591102680931">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="131" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1591085088922" />
-    <state width="1237" height="131" key="GridCell.Tab.0.center" timestamp="1591085088922">
+    <state width="1237" height="131" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1591102680931" />
+    <state width="1237" height="131" key="GridCell.Tab.0.center" timestamp="1591102680931">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="131" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1591085088922" />
-    <state width="1237" height="131" key="GridCell.Tab.0.left" timestamp="1591085088922">
+    <state width="1237" height="131" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1591102680931" />
+    <state width="1237" height="131" key="GridCell.Tab.0.left" timestamp="1591102680931">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="131" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1591085088922" />
-    <state width="1237" height="131" key="GridCell.Tab.0.right" timestamp="1591085088922">
+    <state width="1237" height="131" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1591102680931" />
+    <state width="1237" height="131" key="GridCell.Tab.0.right" timestamp="1591102680931">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="131" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1591085088922" />
+    <state width="1237" height="131" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1591102680931" />
     <state width="1237" height="204" key="GridCell.Tab.1.bottom" timestamp="1591084554716">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -200,12 +200,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Palindrome.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Palindrome.java</url>
-          <line>63</line>
+          <line>61</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
